@@ -1,0 +1,48 @@
+version: '3'
+services:
+  mysqldb:
+    image: mysql:latest
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    hostname: mysqldb
+    container_name: mysqldb
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - network-pegasus
+  backend_person:
+    image:  "oscarygutierrezg/pegasus-test-backend-person"
+    hostname: backend.person
+    container_name: backend_person
+    restart: on-failure
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysqldb
+    networks:
+      - network-pegasus
+  backend_pet:
+    image:  "oscarygutierrezg/pegasus-test-backend-pet"
+    hostname: backend.pet
+    container_name: backend_pet
+    restart: on-failure
+    ports:
+      - "8081:8080"
+    depends_on:
+      - mysqldb
+    networks:
+      - network-pegasus
+  backend_veterinary_bff:
+    image:  "backend"
+    ports:
+      - "8082:8080"
+    depends_on:
+      - backend_person
+      - backend_pet
+    networks:
+      - network-pegasus
+networks:
+  network-pegasus:
+    driver: bridge
