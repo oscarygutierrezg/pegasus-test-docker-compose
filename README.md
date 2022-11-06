@@ -14,8 +14,8 @@ $ docker-compose up
 ```
 Importar la coleccion de postman Test Pegasus.postman_collection
 
-Para ver los swagger de entrar en los siguiente link:
+Para ver los swagger de entrar en los siguientes links:
 
-- http://localhost:8080/person/swagger-ui/index.html
-- http://localhost:8081/pet/swagger-ui/index.html
-- http://localhost:8082/veterinary/swagger-ui/index.html
+- Person API http://localhost:8080/person/swagger-ui/index.html
+- Pet API http://localhost:8081/pet/swagger-ui/index.html
+- Veterinary API http://localhost:8082/veterinary/swagger-ui/index.html
