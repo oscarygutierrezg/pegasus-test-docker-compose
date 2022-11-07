@@ -24,12 +24,12 @@ Para ver los swagger de entrar en los siguientes links:
 Notas:
 
 Credenciales por api
-- person:
-    username: testPersonUser
+- person: <br />
+    username: testPersonUser <br />
     password: xCMbk5081
-- pet:
-    username: testPetUser
+- pet: <br />
+    username: testPetUser <br />
     password: xCMbk5082
-- veterinary:
-    username: testVeterinaryUser
+- veterinary: <br />
+    username: testVeterinaryUser <br />
     password: xCMbk5083
