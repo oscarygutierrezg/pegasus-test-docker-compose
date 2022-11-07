@@ -19,3 +19,18 @@ Para ver los swagger de entrar en los siguientes links:
 - Person API http://localhost:8080/person/swagger-ui/index.html
 - Pet API http://localhost:8081/pet/swagger-ui/index.html
 - Veterinary API http://localhost:8082/veterinary/swagger-ui/index.html
+
+
+Notas:
+
+Credenciales por api
+person:
+    username: testPersonUser
+    password: xCMbk5081
+pet:
+    username: testPetUser
+    password: xCMbk5082
+api:
+veterinary:
+    username: testVeterinaryUser
+    password: xCMbk5083
